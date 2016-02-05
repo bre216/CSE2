@@ -1,5 +1,6 @@
 // Brendan Eckardt 
 // CSE2 
+// 2.5.2016
 //Cyclometer 
 //cyclometer program to print out distance and time for bike trips
 public class Cyclometer {
