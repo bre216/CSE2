@@ -13,11 +13,11 @@ public class ToHex{ //declares class
         //ask user to input three integer values from 0-255 corresponding to RGB pixel colors 
         System.out.print("Please enter three numbers representing RGB values:");
         
-        if( myScanner.hasNextInt() ){
+        if( myScanner.hasNextInt() ){ //checks to see if first input is an integer
             int redValue=myScanner.nextInt(); //assigns first integer as the red value
-            if( myScanner.hasNextInt() ){
+            if( myScanner.hasNextInt() ){ //checks to see if second input is an integer
                 int greenValue=myScanner.nextInt(); //assigns first integer as the green value
-                if( myScanner.hasNextInt() ){
+                if( myScanner.hasNextInt() ){ //checks to see if third input is an integer 
                     int blueValue=myScanner.nextInt(); //assigns first integer as the blue value
                 
         
@@ -201,7 +201,7 @@ public class ToHex{ //declares class
                                         }
                                     }
                                     String hexdec=""+hexdec1+hexdec2+hexdec3+hexdec4+hexdec5+hexdec6; //declares string variable for combined hexadecimal 
-                                    System.out.print("The decimal numbers R:"+redValue+", G:"+greenValue+", B:"+blueValue+", is represented in hexadecimal as:"+hexdec); //prints output
+                                    System.out.print("The decimal numbers R:"+redValue+", G:"+greenValue+", B:"+blueValue+", is represented in hexadecimal as:"+hexdec); //prints hexadecimal 
                                 }
                                 else{
                                     System.out.print("Sorry, you must enter values between 0-255."); //tells user to input values within acceptable range
@@ -216,18 +216,18 @@ public class ToHex{ //declares class
                         }
                 }
                 else{
-                    System.out.println("Sorry, you must enter integer values.");
-                    System.exit(0);
+                    System.out.println("Sorry, you must enter integer values."); //tells the user to use integer inputs
+                    System.exit(0); //ends the program 
                 }
             }
             else{
-                System.out.println("Sorry, you must enter integer values.");
-                System.exit(0);
+                System.out.println("Sorry, you must enter integer values."); //tells the user to use integer inputs
+                System.exit(0); //ends the program 
             }
         }
         else{
-            System.out.println("Sorry, you must enter integer values.");
-            System.exit(0);
+            System.out.println("Sorry, you must enter integer values."); //tells the user to use integer inputs
+            System.exit(0); //ends the program 
         }
     }
 }
