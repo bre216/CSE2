@@ -16,7 +16,7 @@ public class Fibonacci{
         boolean cond1=true; //declare boolean for navigating input check
         boolean cond2=true; //declare boolean for navigating input check
     
-        while( cond1 ){ //begins the second input check 
+        while( cond1 ){ //begins the first input check 
             System.out.println("Please enter the first number in the sequence: "); //asks for first number
             while( cond2 ){ // loops again if improper input is entered
                 if( sc.hasNextInt() ){ //if next input is an integer checks to see if it is negative
