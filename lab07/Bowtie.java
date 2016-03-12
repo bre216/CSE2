@@ -12,10 +12,10 @@ public class Bowtie{ //defines class
         Scanner sc=new Scanner(System.in); //construct a scanner to ask for input 
     
         int nStars=0; //declare variable nStars for size of bowtie
-        boolean cond1=true; //declare boolean for navigating input check
-        boolean cond2=true; //declare boolean for navigating input check
         
         while( true ){
+            boolean cond1=true; //declare boolean for navigating input check
+            boolean cond2=true; //declare boolean for navigating input check
     
             //input check 
         
@@ -106,16 +106,13 @@ public class Bowtie{ //defines class
             while( k<=1 ); //ends loop once full bowtie is printed
             */
             
-            System.out.println("Continue?");
-            String cont=sc.next();
-            if( cont=="Y" || cont=="y" ){
-                cond1=true;
-                cond2=true;
+            System.out.println("Continue?"); //asks user if they want to make another bowtie
+            String cont=sc.next(); //assigns the next input to a string
+            if( cont.equals("Y") || cont.equals("y") ){ //checks string to see if it is Y or y
             }
-            else{
+            else{ //if not, breaks out of the infinite loop and ends the program 
                 break;
             }
-            
-        }
-    }
-}
+        } //ends "continue?" loop
+    } //ends main method
+} //ends class
