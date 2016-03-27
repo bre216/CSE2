@@ -123,28 +123,16 @@ public class Games{ //class for program
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the word that you would like to scramble: ");
         String word=sc.next();
-        int length=word.length();
-        //System.out.println(length);
-        Random randGen=new Random();
         
-        for( int i=0; i<=length; i++){
-            char char0=word.charAt(0);
-            char char1=word.charAt(1);
-            char char2=word.charAt(2);
-            char char3=word.charAt(3);
-            char char4=word.charAt(4);
-            char char5=word.charAt(5);
-            char char6=word.charAt(6);
-            char char7=word.charAt(7);
-            char intermed='a';
-            
-            int rand=randGen.nextInt(length);
-            intermed=word.charAt(rand);
-            char rand1=word.charAt(rand);
-            rand1=char0;
+        char char0=word.charAt(0);
+        char intermed='k';
+        for( int i=0; i<word.length(); i++ ){
+            char rand=word.charAt(i);
+            intermed=rand;
+            rand=char0;
             char0=intermed;
-            
-            System.out.println(char0+char1+char2+char3+char4+char5+char6+char7);
+            System.out.print(word);
+            System.out.print(char0);
         }
     } //end of scramble game method
     
