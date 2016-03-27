@@ -121,42 +121,49 @@ public class Games{ //class for program
     
     public static void scramble(){ //beginning of scramble game method
         Scanner sc=new Scanner(System.in);
+        Random randGen=new Random();
         System.out.println("Enter the word that you would like to scramble: ");
         String word=sc.next();
+        int length=word.length();
         
-        char char0=word.charAt(0);
-        char intermed='k';
-        for( int i=0; i<word.length(); i++ ){
-            char rand=word.charAt(i);
-            intermed=rand;
-            rand=char0;
+        for( int i=0; i<length; i++ ){
+            int rand=randGen.nextInt(length);
+            char char0=word.charAt(0);
+            char charj=word.charAt(rand);
+            char intermed='k';
+            intermed=charj;
+            charj=char0;
             char0=intermed;
-            System.out.print(word);
-            System.out.print(char0);
+            
+            //can switch the individual characters but 
+            //having problems deconstructing entire word and reconstructing
+            
+            
         }
+        
     } //end of scramble game method
     
-    public static void main(String [] args){
-        Scanner sc=new Scanner(System.in);
+    public static void main(String [] args){ //main method for program 
+        Scanner sc=new Scanner(System.in); //constructs instance of scanner class
         
-        System.out.println("Welcome to AJ's game center!");
-        System.out.println("We have three games here: guessTheBox, spinTheWheel, and scrambler. ");
-        System.out.println("Which game would you like to play? ");
+        System.out.println("Welcome to AJ's game center!"); //prints welcome message
+        System.out.println("We have three games here: guessTheBox, spinTheWheel, and scrambler. "); //give user options
+        System.out.println("Which game would you like to play? "); //asks user to choose an option
         
         String cont=sc.next(); //assigns the next input to a string
         
-        if( cont.equals("guessTheBox") ){
-            guessTheBox();
+        if( cont.equals("guessTheBox") ){ //tests input to see if it matches guessTheBox
+            guessTheBox(); //if so, calls guessTheBox game method
         }
-        else if( cont.equals("spinTheWheel") ){
-            spinTheWheel();
+        else if( cont.equals("spinTheWheel") ){ //tests input to see if it matches spinTheWheel
+            spinTheWheel(); //if so, calls spinTheWheel game method
         }
-        else if( cont.equals("scrambler") ){
-            scramble();
+        else if( cont.equals("scrambler") ){ //tests input to see if it matches scrambler
+            scramble(); //if so, calls scrambler game method
         }
-        else{
-            System.out.println("ERROR: the arcade does not have that game.");
-            System.exit(0);
+        else{ //if input does not match any game options
+            System.out.println("ERROR: the arcade does not have that game."); //prints error message
+            System.exit(0); //quits the program
         }
         
     } //end of main method
