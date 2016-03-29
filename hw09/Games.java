@@ -114,32 +114,24 @@ public class Games{ //class for program
             }
             else{ //if input is not red, Red, black, or Black
                 System.out.println("Please choose red or black: "); //asks for correct input
-                //sc.next();
             }
         }
     } //end of spinTheWheel game method
     
     public static void scramble(){ //beginning of scramble game method
-        Scanner sc=new Scanner(System.in);
-        Random randGen=new Random();
-        System.out.println("Enter the word that you would like to scramble: ");
-        String word=sc.next();
-        int length=word.length();
+        Scanner sc=new Scanner(System.in); //constructs instance of scanner class
+        System.out.println("Enter the word that you would like to scramble: "); //asks user for input
+        String word=sc.next(); //assigns input to a string 
+        int length=word.length(); //finds the length of that string
         
-        for( int i=0; i<length; i++ ){
-            int rand=randGen.nextInt(length);
-            char char0=word.charAt(0);
-            char charj=word.charAt(rand);
-            char intermed='k';
-            intermed=charj;
-            charj=char0;
-            char0=intermed;
-            
-            //can switch the individual characters but 
-            //having problems deconstructing entire word and reconstructing
-            
-            
+        for( int i=0; i<11; i++ ){ //scrambles several times
+            String char0= (String) word.subSequence(0,1); //assigns first character in string to a substring
+            String charMid= (String) word.subSequence(1,length-1); //assigns middle characters in string to a substring
+            String charFinal= (String) word.subSequence(length-1, length); //assigns final character in string to a substring
+            word=charMid+char0+charFinal; //rearranges substrings to create new word
         }
+        System.out.println(word); //prints the final word 
+        System.exit(0); //exits the program
         
     } //end of scramble game method
     
