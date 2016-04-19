@@ -44,9 +44,9 @@ public class CSE2Linear{
                 }
             }
         }
+        System.out.println("Sorted:");
         for( int i=0; i<15; i++ ){
-            System.out.println("Sorted:");
-            System.out.println("grades["+i+"]="+grades[i]);
+            System.out.println(grades[i]+" ");
         }
         search( grades );
     
@@ -59,9 +59,9 @@ public class CSE2Linear{
             grades[0]=holder;
         }
         
+        System.out.println("Scrambled:");
         for( int i=0; i<15; i++ ){
-            System.out.println("Scrambled:");
-            System.out.print("grades["+i+"]="+grades[i]+" ");
+            System.out.print(grades[i]+" ");
         }
         search( grades );
     } 
@@ -87,7 +87,7 @@ public class CSE2Linear{
                             break;
                         }
                         else if( i==14 ){
-                            System.out.println("No grade matching that value was found");
+                            System.out.println("No grade matching that value was found after 15 iterations.");
                         }
                     }
                     
