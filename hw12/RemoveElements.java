@@ -56,7 +56,7 @@ public class RemoveElements{
           random[i]=(int)(Math.random()*10); //assigns each member of the array a random integer from 0-9
       }
       return random; //returns the array with assigned values
-  }
+  } //end of array creation method 
   
   //method for deleting one index from the array
   public static int[] delete( int[] list, int pos ){
@@ -76,23 +76,23 @@ public class RemoveElements{
           }
       }
       return deletedArray; //returns the new array
-  }
+  } //end of delete method 
   
   //method to remove all instances of certain integer from the array
   public static int[] remove( int[] list, int target ){
       int i=0;
       for( int j=0; j<list.length; j++){ //loop to count how many times the chosen integer occurs in the array
-        if( list[j]==target){
-            i++;
+        if( list[j]==target){ //checks to see if array value matches chosen integer
+            i++; //if so, increments counter "i"
         }
         else{
           
         }
       }
       int[] removeArray=new int[list.length-i]; //creates new array of the proper length
-      int k=0;
-      i=0;
-      while( i<removeArray.length ){
+      int k=0; //creates new variable to help navigate array
+      i=0; //keeps track of array index position
+      while( i<removeArray.length ){ //repeats for every member of the array 
         while( list[i+k]==target ){//checks to see if value at that index=target value
           k++; //if so, moves on to the next value and checks again
         }
@@ -100,5 +100,5 @@ public class RemoveElements{
         i++; //moves on to the next index in the new array
       }
       return removeArray; //returns the final array
-  }
+  } //end of remove method 
 }
