@@ -19,7 +19,7 @@ public class arraySearch{ //start of class
         } //end of assignment
         
         //use linear search to find the minimum of array1
-        int min1=100; //create int variable to hold minimum value in array1
+        int min1=array[i]; //create int variable to hold minimum value in array1
         for( int i=0; i<50; i++ ){ //runs the test for all 50 members of array1
             if( array1[i]<min1 ){ //if member i of array1 is less than minimum, sets that number as the new minimum 
                 min1=array1[i];
@@ -28,7 +28,7 @@ public class arraySearch{ //start of class
         System.out.println("The minimum of array1 is: "+min1); //prints out the minimum value of array1
         
         //use linear search to find maximum of array1
-        int max1=0; //create an int variable to hold maximum value in array1
+        int max1=array[i]; //create an int variable to hold maximum value in array1
         for( int i=0; i<50; i++ ){ //run test for all 50 members of array1
             if( array1[i]>max1 ){ //if value at the index is greater than max
                 max1=array1[i]; //sets that value as the new maximum 
