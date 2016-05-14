@@ -68,6 +68,6 @@ public class CardGenerator{
                 break;
         }
         
-        System.out.print("The card you have selected is "+cardIdentity+" of "+ cardSuit); //prints the identity of the card generated
+        System.out.println("The card you have selected is "+cardIdentity+" of "+ cardSuit); //prints the identity of the card generated
     }
 }
